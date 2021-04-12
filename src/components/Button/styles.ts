@@ -7,9 +7,18 @@ interface IStyledButtonProps {
 }
 
 const ButtonContainer = styled.button<IStyledButtonProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10rem;
+  height: 2.5rem;
+
   background: ${props => props.color};
   color: ${props => props.colorText};
+
   border: ${props => props.border};
+  border-radius: 5rem;
 `;
 
 export default ButtonContainer;
