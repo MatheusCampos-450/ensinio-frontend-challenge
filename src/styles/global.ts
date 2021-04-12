@@ -9,13 +9,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --background: #ffffff;
-    --black: #373435;
-    --red-pink: #f60846;
-    --soft-pink: #fce6ec;
-    --gray: #a0a0a0;
-    --soft-gray: #F5F5F6;
-    --green: #0AAD74;
+    --background: #E5E5E5;
+    --black: #130C25;
+    --soft-black: #423D51;
+    --water-green: #00E1E7;
+    --purple: #432E98;
+    --soft-purple: #5F41D9
+
   }
 
   @media(max-width: 1980px) {
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font: 400 16px "Roboto", sans-serif;
+    font: 400 16px "Inter", sans-serif;
   }
 
   button {
