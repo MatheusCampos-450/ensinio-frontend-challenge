@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import EADIcon from 'assets/ead.svg';
 import AppIcon from 'assets/icon-app.svg';
@@ -11,9 +11,17 @@ import DropdownButtonSolutionsContainer from './styles';
 const DropdownButtonSolutions = () => {
   const [isVisibleDropdown, setIsVisibleDropdown] = useState(false);
 
-  const handleVisibleDropdown = () => {
+  const handleVisibleDropdown = useCallback(() => {
     // eslint-disable-next-line no-undef
     let dropdown: NodeJS.Timeout;
+
+    const OpenDropdown = () => {
+      setIsVisibleDropdown(true);
+    };
+
+    const CloseDropdown = () => {
+      setIsVisibleDropdown(false);
+    };
 
     const StartTimeout = () => {
       dropdown = setTimeout(() => {
@@ -26,21 +34,37 @@ const DropdownButtonSolutions = () => {
     };
 
     return {
+      openDropdown: OpenDropdown,
+      closeDropdown: CloseDropdown,
       startTimeout: StartTimeout,
       stopTimeout: StopTimeout,
     };
-  };
+  }, []);
 
-  const HandleTimeout = handleVisibleDropdown();
+  const handleTimeout = handleVisibleDropdown();
+
+  const handleCloseDropdown = useCallback(() => {
+    handleTimeout.closeDropdown();
+  }, [handleTimeout]);
+
+  const handleOpenDropdown = useCallback(() => {
+    handleTimeout.openDropdown();
+  }, [handleTimeout]);
+
+  const handleStartTimeout = useCallback(() => {
+    handleTimeout.startTimeout();
+  }, [handleTimeout]);
+
+  const handleStopTimeout = useCallback(() => {
+    handleTimeout.stopTimeout();
+  }, [handleTimeout]);
 
   return (
     <DropdownButtonSolutionsContainer>
       <button
         type="button"
-        onMouseEnter={() => {
-          setIsVisibleDropdown(true);
-        }}
-        onMouseLeave={HandleTimeout.startTimeout}
+        onMouseEnter={handleOpenDropdown}
+        onMouseLeave={handleStartTimeout}
       >
         Soluções
         <img src={PolygonDropdown} alt="" />
@@ -50,13 +74,8 @@ const DropdownButtonSolutions = () => {
         <button
           className="DropdownContent"
           type="button"
-          onMouseEnter={() => {
-            HandleTimeout.stopTimeout();
-            setIsVisibleDropdown(true);
-          }}
-          onMouseLeave={() => {
-            setIsVisibleDropdown(false);
-          }}
+          onMouseEnter={handleStopTimeout}
+          onMouseLeave={handleCloseDropdown}
         >
           <h1>SOLUÇÕES PRINCIPAIS</h1>
 

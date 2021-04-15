@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import BrIcon from 'assets/br-icon.svg';
 import EsIcon from 'assets/es-icon.svg';
@@ -12,9 +12,17 @@ export const DropdownButtonLanguages = () => {
   const [languageSelected, setLanguageSelected] = useState('PT');
   const [isVisibleDropdown, setIsVisibleDropdown] = useState(false);
 
-  const handleVisibleDropdown = () => {
+  const handleVisibleDropdown = useCallback(() => {
     // eslint-disable-next-line no-undef
     let dropdown: NodeJS.Timeout;
+
+    const OpenDropdown = () => {
+      setIsVisibleDropdown(true);
+    };
+
+    const CloseDropdown = () => {
+      setIsVisibleDropdown(false);
+    };
 
     const StartTimeout = () => {
       dropdown = setTimeout(() => {
@@ -27,21 +35,37 @@ export const DropdownButtonLanguages = () => {
     };
 
     return {
+      openDropdown: OpenDropdown,
+      closeDropdown: CloseDropdown,
       startTimeout: StartTimeout,
       stopTimeout: StopTimeout,
     };
-  };
+  }, []);
 
-  const HandleTimeout = handleVisibleDropdown();
+  const handleTimeout = handleVisibleDropdown();
+
+  const handleCloseDropdown = useCallback(() => {
+    handleTimeout.closeDropdown();
+  }, [handleTimeout]);
+
+  const handleOpenDropdown = useCallback(() => {
+    handleTimeout.openDropdown();
+  }, [handleTimeout]);
+
+  const handleStartTimeout = useCallback(() => {
+    handleTimeout.startTimeout();
+  }, [handleTimeout]);
+
+  const handleStopTimeout = useCallback(() => {
+    handleTimeout.stopTimeout();
+  }, [handleTimeout]);
 
   return (
     <DropdownButtonLanguagesContainer languageSelected={languageSelected}>
       <button
         type="button"
-        onMouseEnter={() => {
-          setIsVisibleDropdown(true);
-        }}
-        onMouseLeave={HandleTimeout.startTimeout}
+        onMouseEnter={handleOpenDropdown}
+        onMouseLeave={handleStartTimeout}
       >
         {languageSelected}
         <img className="PolygonDropdown" src={PolygonDropdown} alt="" />
@@ -51,13 +75,8 @@ export const DropdownButtonLanguages = () => {
         <button
           className="DropdownContent"
           type="button"
-          onMouseEnter={() => {
-            HandleTimeout.stopTimeout();
-            setIsVisibleDropdown(true);
-          }}
-          onMouseLeave={() => {
-            setIsVisibleDropdown(false);
-          }}
+          onMouseEnter={handleStopTimeout}
+          onMouseLeave={handleCloseDropdown}
         >
           <button
             className="LanguageButton"
