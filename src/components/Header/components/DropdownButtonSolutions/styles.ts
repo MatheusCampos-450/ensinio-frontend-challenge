@@ -8,6 +8,8 @@ const DropdownButtonSolutionsContainer = styled.div`
     display: flex;
     align-items: center;
 
+    font-size: 1rem;
+
     background: none;
     color: white;
     border: none;
@@ -33,7 +35,7 @@ const DropdownButtonSolutionsContainer = styled.div`
     min-width: 37rem;
 
     padding: 2.25rem 2.5rem;
-    margin-top: 2.2rem;
+    margin: 2.2rem 0 0 0;
 
     background: var(--background);
     border-radius: 0.375rem;
@@ -44,7 +46,7 @@ const DropdownButtonSolutionsContainer = styled.div`
     cursor: default;
 
     h1 {
-      font-family: Inter;
+      font-family: Roboto, 'sans-serif';
       font-size: 1rem;
       font-style: normal;
       font-weight: 600;
@@ -77,7 +79,7 @@ const DropdownButtonSolutionsContainer = styled.div`
           margin-left: 1rem;
 
           h2 {
-            font-family: Inter;
+            font-family: Roboto, 'sans-serif';
             font-size: 0.88rem;
             font-style: normal;
             font-weight: 600;
