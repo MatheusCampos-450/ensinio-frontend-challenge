@@ -36,7 +36,7 @@ const HeaderModal = () => {
           colorText="white"
           border="0.11rem solid white"
         >
-          blog
+          Blog
         </Button>
         <Button
           className="ButtonMenuMobile"

@@ -16,35 +16,28 @@ const HeaderModalContainer = styled.div`
   backdrop-filter: blur(6px);
 
   .ButtonMenuMobile {
-    font-weight: 500;
+    font-weight: bold;
 
     font-size: 1.7rem;
-    color: var(--soft-gray);
-    border: 1px solid white;
-    border-radius: 0;
+    color: white;
+    border: 2px solid white;
 
-    background: var(--background);
+    background: linear-gradient(
+      90deg,
+      #5f41d9 -880.48%,
+      rgba(95, 65, 217, 0) 100%
+    );
 
     width: 17rem;
     height: 3.5rem;
 
+    margin-top: 0.5rem;
+
     transition: 200ms;
-
-    &:first-child {
-      border-radius: 1rem 1rem 0 0;
-    }
-
-    &:last-child {
-      border-radius: 0 0 1rem 1rem;
-    }
 
     &:hover {
       color: var(--black);
-      background: linear-gradient(
-        90deg,
-        #5f41d9 -880.48%,
-        rgba(95, 65, 217, 0) 100%
-      );
+      background: var(--background);
     }
   }
 
@@ -66,42 +59,41 @@ const HeaderModalContainer = styled.div`
     margin: 4rem 0 0 0;
 
     button {
-      font-weight: 500;
+      font-weight: bold;
 
       font-size: 1.7rem;
       color: var(--soft-gray);
-      border: 1px solid white;
-      border-radius: 0;
+      border: 2px solid white;
 
-      background: var(--background);
+      background: white;
 
       width: 17rem;
       height: 3.5rem;
 
       transition: 200ms;
 
-      &:first-child {
-        border-radius: 1rem 1rem 0 0;
+      &:last-child {
+        font-weight: bold;
+
+        background: var(--water-green);
+        border: none;
+        color: var(--soft-black);
+
+        margin-top: 0.5rem;
 
         &:hover {
           color: var(--black);
-          background: linear-gradient(
-            90deg,
-            #5f41d9 -880.48%,
-            rgba(95, 65, 217, 0) 100%
-          );
+          background: white;
         }
       }
 
-      &:last-child {
-        border-radius: 0 0 1rem 1rem;
-      }
-
       &:hover {
-        color: var(--soft-black);
-        background: white;
-
-        border: none;
+        color: var(--black);
+        background: linear-gradient(
+          90deg,
+          #5f41d9 -880.48%,
+          rgba(95, 65, 217, 0) 100%
+        );
       }
     }
   }
