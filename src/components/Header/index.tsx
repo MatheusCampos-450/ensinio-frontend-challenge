@@ -17,8 +17,8 @@ const Header = ({ showMobileModal, mobileVisibility }: any) => {
 
   return (
     <HeaderContainer>
-      <div className="header">
-        <img className="logoImage" src={Logo} alt="Ensinio" />
+      <div className="Header">
+        <img className="LogoImage" src={Logo} alt="Ensinio" />
 
         <MenuButton
           className="MobileMenuButton"
@@ -27,7 +27,7 @@ const Header = ({ showMobileModal, mobileVisibility }: any) => {
           isActive={mobileVisibility}
         />
 
-        <div className="menu">
+        <div className="Menu">
           <div className="ButtonsMenu">
             <DropdownButtonSolutions />
             <a href="/">Preços</a>
@@ -36,7 +36,7 @@ const Header = ({ showMobileModal, mobileVisibility }: any) => {
             <a href="/">Contato</a>
           </div>
 
-          <div className="login">
+          <div className="Login">
             <img className="Separator" src={Separator} alt="" />
             <a href="/">
               <img className="ProfileIcon" src={ProfileIcon} alt="" />

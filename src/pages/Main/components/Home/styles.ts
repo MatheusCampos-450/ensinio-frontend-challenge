@@ -25,7 +25,7 @@ export const HomeContainer = styled.div`
 
     align-items: flex-end;
 
-    .content {
+    .Content {
       width: 26rem;
 
       h1 {
@@ -110,7 +110,7 @@ export const HomeContainer = styled.div`
       }
     }
 
-    .image {
+    .Image {
       display: flex;
       justify-content: flex-end;
       max-height: 37rem;
@@ -145,7 +145,7 @@ export const HomeContainer = styled.div`
 
       align-items: center;
 
-      .content {
+      .Content {
         max-width: 40rem;
         width: 100%;
         margin: 4.5rem 0 4rem 0;
@@ -155,7 +155,7 @@ export const HomeContainer = styled.div`
         }
       }
 
-      .image {
+      .Image {
         max-width: 31.25rem;
         width: 100%;
 
@@ -168,7 +168,7 @@ export const HomeContainer = styled.div`
 
   @media (max-width: 430px) {
     .Home {
-      .content {
+      .Content {
         h2 {
           font-size: 2.4rem;
         }

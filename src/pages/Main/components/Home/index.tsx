@@ -12,7 +12,7 @@ const Home = () => {
     <HomeContainer>
       <img className="HeaderImage" src={MediaIcons} alt="" />
       <div className="Home">
-        <div className="content">
+        <div className="Content">
           <h1>
             <img src={Devices} alt="" />
             PLATAFORMA ALL IN ONE
@@ -35,17 +35,17 @@ const Home = () => {
             </HomeButton>
 
             <HomeButton
+              className="VideoButton"
               color="none"
               colorText="white"
               border="none"
-              className="VideoButton"
             >
               <img src={PlayIcon} alt="" />
               Ver vídeo
             </HomeButton>
           </div>
         </div>
-        <div className="image">
+        <div className="Image">
           <img src={Men} alt="" />
         </div>
       </div>
