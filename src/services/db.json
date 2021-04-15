@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Trilhas de etapas",
+      "description": "Crie planos de estudos especificando aulas e/ou cursos e definindo a ordem que seus alunos devem estudar.",
+      "img_url": "https://i.ibb.co/wz2Ld5Y/icon-trilhas.png"
+    },
+    {
+      "id": 2,
+      "title": "Playlists",
+      "description": "Transforme uma coleção em uma playlist para poder ver vídeos e áudios em sequência offline.",
+      "img_url": "https://i.ibb.co/QvGMr3J/icon-playlists.png"
+    },
+    {
+      "id": 3,
+      "title": "Coleções",
+      "description": "Crie coleções, adicione conteúdos, reorganize ítens e deixe tudo do seu jeito para melhorar a experiência.",
+      "img_url": "https://i.ibb.co/P9BQ8gS/icon-folder.png"
+    }
+  ]
+}
