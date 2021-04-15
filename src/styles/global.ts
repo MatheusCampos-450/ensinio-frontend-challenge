@@ -42,9 +42,39 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media(max-width: 400px) {
+  @media(max-width: 410px) {
     html {
       font-size: 72%;
+    }
+  }
+
+  @media(max-width: 380px) {
+    html {
+      font-size: 68%;
+    }
+  }
+
+  @media(max-width: 360px) {
+    html {
+      font-size: 65%;
+    }
+  }
+
+  @media(max-width: 340px) {
+    html {
+      font-size: 62%;
+    }
+  }
+
+  @media(max-width: 320px) {
+    html {
+      font-size: 58%;
+    }
+  }
+
+  @media(max-width: 300px) {
+    html {
+      font-size: 54%;
     }
   }
 
