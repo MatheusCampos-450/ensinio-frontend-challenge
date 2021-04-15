@@ -10,9 +10,17 @@ import HeaderContainer from './styles';
 import DropdownButtonSolutions from './components/DropdownButtonSolutions';
 import { DropdownButtonLanguages } from './components/DropdownButtonLanguages';
 
-const Header = ({ showMobileModal, mobileVisibility }: any) => {
+interface IHeaderProps {
+  setShowMobileModal: Function;
+  showMobileModal: Boolean;
+}
+
+const Header: React.FC<IHeaderProps> = ({
+  setShowMobileModal,
+  showMobileModal,
+}: IHeaderProps) => {
   const handleOpen = () => {
-    if (showMobileModal) showMobileModal(!mobileVisibility);
+    if (setShowMobileModal) setShowMobileModal(!showMobileModal);
   };
 
   return (
@@ -24,7 +32,7 @@ const Header = ({ showMobileModal, mobileVisibility }: any) => {
           className="MobileMenuButton"
           type="button"
           onClick={handleOpen}
-          isActive={mobileVisibility}
+          isActive={showMobileModal}
         />
 
         <div className="Menu">

@@ -13,8 +13,8 @@ function App() {
   return (
     <AppContainer>
       <Header
-        showMobileModal={setShowMobileModal}
-        mobileVisibility={showMobileModal}
+        setShowMobileModal={setShowMobileModal}
+        showMobileModal={showMobileModal}
       />
       {showMobileModal && <HeaderModal />}
       <Routes />
