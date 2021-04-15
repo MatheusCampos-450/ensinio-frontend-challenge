@@ -1,30 +1,14 @@
 import React from 'react';
 
-import Home from './componets/Home';
+import Home from './components/Home';
+import ResourcesContent from './components/ResourcesContent';
 import MainContainer from './styles';
 
 const Main = () => {
   return (
     <MainContainer>
       <Home />
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
+      <ResourcesContent />
     </MainContainer>
   );
 };
