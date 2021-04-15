@@ -27,7 +27,7 @@ const ResourcesContentContainer = styled.div`
         display: flex;
         align-items: center;
 
-        font-family: Roboto, 'sans-serif';
+        font-family: Archivo, 'sans-serif';
         font-size: 1rem;
         font-style: normal;
         font-weight: 600;
@@ -55,7 +55,7 @@ const ResourcesContentContainer = styled.div`
     }
 
     h1 {
-      font-family: Roboto, 'sans-serif';
+      font-family: Archivo, 'sans-serif';
       font-size: 2rem;
       font-style: normal;
       font-weight: 400;

@@ -46,7 +46,7 @@ const DropdownButtonSolutionsContainer = styled.div`
     cursor: default;
 
     h1 {
-      font-family: Roboto, 'sans-serif';
+      font-family: Archivo, 'sans-serif';
       font-size: 1rem;
       font-style: normal;
       font-weight: 600;
@@ -79,7 +79,7 @@ const DropdownButtonSolutionsContainer = styled.div`
           margin-left: 1rem;
 
           h2 {
-            font-family: Roboto, 'sans-serif';
+            font-family: Archivo, 'sans-serif';
             font-size: 0.88rem;
             font-style: normal;
             font-weight: 600;

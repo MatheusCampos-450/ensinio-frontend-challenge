@@ -32,7 +32,7 @@ export const HomeContainer = styled.div`
         display: flex;
         align-items: center;
 
-        font-family: Roboto, 'sans-serif';
+        font-family: Archivo, 'sans-serif';
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
